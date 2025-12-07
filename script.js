@@ -1,4 +1,5 @@
-﻿const API_URL = 'http://localhost:8001';
+// Use empty string for relative URLs - works on both localhost and production
+const API_URL = window.location.origin;
 
 // DOM Elements
 const dishInput = document.getElementById('dishInput');
@@ -725,3 +726,4 @@ function displayFavoriteRecipes() {
         </div>
     `).join('');
 }
+
