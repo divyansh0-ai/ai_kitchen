@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: ai-kitchen
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: PEXELS_API_KEY
+        sync: false
+    healthCheckPath: /
